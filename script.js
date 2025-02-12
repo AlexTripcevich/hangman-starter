@@ -1,5 +1,5 @@
 //global variables here: word, word array(s), guesses, guessedLetters
-
+console.log(data.length)
 //event listeners for startGame and guessLetter
 //for example:
 document.getElementById("start").addEventListener("click",startGame);
