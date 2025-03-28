@@ -3,6 +3,8 @@
   <head>
     <title>repl.it</title>
     <link href="styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
     <script src="data.js"></script>
   </head>
  <body>
@@ -11,29 +13,69 @@
 
 <!-- select box for difficulty? -->
 
-<button id="start">Show graphs</button>
 
 <!-- try the more advanced button system from classroom instead of this! -->
-<select id="Activity type">
-  <option value="running">Running</option>
-  <option value="biking">Biking</option>
-  <option value="swimming">Swimming</option>
-  <option value="workouts">Workouts</option>
+<select id="activityType">
+  <option value="Run">Running</option>
+  <option value="Ride">Biking</option>
+  <option value="Swim">Swimming</option>
+  <!-- ..... -->
+</select>
+<select id="year">
+  <option value="2022">2022</option>
+  <option value="2023">2023</option>
+  <option value="2024">2024</option>
+  <option value="2025">2025</option>
   <!-- ..... -->
 </select>
 
 <button id="acitivtySelector">Select Activity Type</button>
+<h4>Add event</h4>
+
+<form id="eventForm">
+
+  <label for="eventMonth">Month:</label>
+
+  <select id="eventMonth" name="eventMonth">
+      <option value="January">January</option>
+      <option value="February">February</option>
+      <option value="March">March</option>
+      <option value="April">April</option>
+      <option value="May">May</option>
+      <option value="June">June</option>
+      <option value="July">July</option>
+      <option value="August">August</option>
+      <option value="September">September</option>
+      <option value="October">October</option>
+      <option value="November">November</option>
+      <option value="December">December</option>
+  
+  </select>
+  <br>
+  <label for="eventDescription">Event Description:</label>
+  <textarea id="eventDescription" name="eventDescription"></textarea>
+
+  <br>
+
+  <br>
+  <label for="eventHeight">Event Height on Chart:</label>
+  <input type="number" id="eventHeight" name="eventHeight" />
+  <br>
+<button id="addEvent">Add Event</button>
+<button id="reset">Reset Events</button>
+</form>
+
+
 
 <h3>Activity Graph</h3>
 
-<div id="guessedLetters"></div>
+<div id="milesPerWeek"></div>
 
-<h4>Average Hours per Week</h4>
-<div id="hoursPerWeek"></div>
-
-<div id="word"></div>
+<div id="canvasContainer">
+  <canvas id="myChart"></canvas>
+</div>
 
 <script src="script.js"></script>
 
 </body>
-</html> -->
+
